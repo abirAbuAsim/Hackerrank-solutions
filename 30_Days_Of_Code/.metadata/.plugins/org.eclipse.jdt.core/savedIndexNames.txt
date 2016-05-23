@@ -1,6 +1,5 @@
 INDEX VERSION 1.127+E:\Hackerrank-solutions\30_Days_Of_Code\.metadata\.plugins\org.eclipse.jdt.core
 696259146.index
-2385524513.index
 1890124353.index
 750929697.index
 565240741.index
