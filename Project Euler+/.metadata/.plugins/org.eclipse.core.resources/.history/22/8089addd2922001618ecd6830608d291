@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int T = input.nextInt();
+		long N;
+		int I, J;
+		HashMap<Integer, Integer> numMap = new HashMap<Integer, Integer>();
+		long sum;
+		for (I = 1; I <= T; I++) {
+			N = input.nextInt();
+			sum = 0;
+			for (J = 1; J < N; J += 2) {
+				if(numMap.containsKey(J)){
+					continue;
+				}
+				if(J % 3 == 0 || J % 5 == 0) {
+					numMap.put(J, 1);
+					sum += J;
+				}
+			}
+			System.out.println(sum);
+		}
+	}
+}

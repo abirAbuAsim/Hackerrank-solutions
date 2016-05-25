@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+	private int SumDivisibleBy(int n, int p) {
+		if (n == 15) {
+			return n * (p / n)  * ((p/n) + 1) / 2 + p;
+		}
+		return n * (p / n)  * ((p/n) + 1) / 2;
+	}
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int T = input.nextInt();
+		int N;
+		int I, J;
+		Solution ob;
+		HashMap<Integer, Integer> numMap = new HashMap<Integer, Integer>();
+		int sum;
+		for (I = 1; I <= T; I++) {
+			N = input.nextInt();
+			ob = new Solution();
+			System.out.println("for 3: " + ob.SumDivisibleBy(3, N));
+			System.out.println("for 5: " + ob.SumDivisibleBy(5, N));
+			System.out.println("for 15: " + ob.SumDivisibleBy(15, N));
+			sum = ob.SumDivisibleBy(3, N) + ob.SumDivisibleBy(5, N) - ob.SumDivisibleBy(15, N);
+			System.out.println(sum);
+		}
+	}
+}

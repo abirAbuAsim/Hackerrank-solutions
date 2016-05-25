@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int T = input.nextInt();
+		int N, I, J;
+		int arr[];
+		long sum;
+		for (I = 1; I <= T; I++) {
+			N = input.nextInt();
+			arr = new int[1000000010];
+			sum = 0;
+			for (J = 3; J < N; J += 3) {
+				if(J % 3 == 0) {
+					arr[J] = 1;
+					sum += J;
+				}
+			}
+			for (J = 5; J < N; J += 5) {
+				if(J % 5 == 0) {
+					if (arr[J] == 1) {
+						continue;
+					}
+					sum += J;
+				}
+			}
+			System.out.println(sum);
+		}
+	}
+}

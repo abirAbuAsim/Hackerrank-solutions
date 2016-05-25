@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int T = input.nextInt();
+		long N;
+		int I, J;
+		Set<Integer> num = new HashSet<Integer>();
+		long sum;
+		for (I = 1; I <= T; I++) {
+			N = input.nextInt();
+			sum = 0;
+			for (J = 3; J < N; J += 3) {
+				if(J % 3 == 0) {
+					num.add(J);
+					sum += J;
+				}
+			}
+			for (J = 5; J < N; J += 5) {
+				if(J % 5 == 0) {
+					if (num.contains(J)) {
+						continue;
+					}
+					sum += J;
+				}
+			}
+			System.out.println(sum);
+		}
+	}
+}

@@ -9,45 +9,24 @@ public class Solution {
     	int n = input.nextInt();
     	int k = input.nextInt();
     	int a[] = new int[n + 1];
-    	int aNew[] = new int[n+1];
-    	int arrayOfK[] = new int[k];
-    	Set<Integer> sPrime = new HashSet<Integer>();
     	for (int a_i = 0; a_i < n; a_i++) {
     		a[a_i] = input.nextInt();
     	}
-    	
-    	int mid;
-    	if (k % 2 == 0) {
-    		mid = k / 2;
-    	} else {
-    		mid = (int) Math.ceil(k / 2.0);
-    	}
-    	boolean lessThanMidExists = false;
-    	boolean midTaken = false;
+    	int count = 0;
+    	int finalCount = 0;
     	for (int I = 0; I < n; I++) {
-    		if (a[I] % k < mid) {
-    			lessThanMidExists = true;
-    		}
-    	}
-    	if(lessThanMidExists) {
-    		for (int I = 0; I < n; I++){
-    			if (a[I] % k < mid) {
-    				sPrime.add(a[I]);
-        		}
-    			if (k % 2 == 0) {
-    				if (a[I] % k == mid && !midTaken) {
-    					sPrime.add(a[I]);
-    					midTaken = true;
-    				}
+    		for (int J = 0; J < n; J++) {
+    			if (I == J) {
+    				continue;
+    			}
+    			int mod = ((a[I] % k) + (a[J] % k)) % k;
+    			if (mod < k) {
+    				count++;
     			}
     		}
-    	} else {
-    		for (int I = 0; I < n; I++){
-    			if (a[I] % k >= mid) {
-    				sPrime.add(a[I]);
-        		}
-    		}
+    		
     	}
+
     	// Test Print starts
     	/*
     	System.out.println("a: ");
@@ -66,7 +45,7 @@ public class Solution {
     	// Test Print ends
 
     	//System.out.println("Result:");
-    	System.out.println(sPrime.size());
+    	System.out.println(count);
     	
     }
 }
