@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;Arithmatic.java&apos; to &apos;Arithmetic.java&apos;&#x0D;&#x0A;- Original project: &apos;Day2-Operators&apos;&#x0D;&#x0A;- Original element: &apos;Arithmatic.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Arithmetic.java&apos;" description="Rename compilation unit &apos;Arithmatic.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{Arithmatic.java" name="Arithmetic.java" references="false" stamp="1464065649526" version="1.0"/>
-</session>

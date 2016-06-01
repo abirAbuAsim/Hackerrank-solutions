@@ -1,0 +1,16 @@
+INDEX VERSION 1.127+E:\GitProjects\Hackerrank-solutions\Java\Introduction\.metadata\.plugins\org.eclipse.jdt.core
+1794832342.index
+3498985059.index
+3437136576.index
+1149023662.index
+1158310969.index
+2494608331.index
+3859774952.index
+750929697.index
+4264257276.index
+2600213056.index
+2082913501.index
+1921511121.index
+1890124353.index
+565240741.index
+696259146.index
