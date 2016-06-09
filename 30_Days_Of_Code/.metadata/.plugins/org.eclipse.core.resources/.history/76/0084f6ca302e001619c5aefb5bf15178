@@ -1,0 +1,22 @@
+/**
+ * 	Verdict :
+ * 	OJ 		: Hackerrank
+ * 
+ * 	@author : absak
+ * 	@version : June 9, 2016
+ * 
+ */
+import java.util.*;
+import java.io.*;
+public class Calculator {
+	int power(int n, int p) throws Exception{
+		int result;
+		try{
+			result = (int)Math.pow(n, p);	
+		}catch(Exception e){
+			throw new Exception("n and p should be non-negative");
+		}
+		return result;
+		
+	}
+}
