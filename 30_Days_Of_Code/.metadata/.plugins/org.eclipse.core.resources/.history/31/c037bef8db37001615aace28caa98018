@@ -1,0 +1,36 @@
+/**
+ *  Verdict : 
+ *  OJ		:
+ *  
+ *  @author absakDev
+ *  @version June 22, 2016
+ */
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    	Scanner input = new Scanner(System.in);
+    	int T = input.nextInt();
+    	int N, K;
+    	for(int i = 1; i <= T; i++) {
+    		N = input.nextInt();
+    		K = input.nextInt();
+    		int temp;
+    		int maxValue = Integer.MIN_VALUE;
+    		for(int j = 1; j < N; j++) {
+    			for(int m = j+1; m <= N; m++) {
+    				temp = j&m;
+    				System.out.println(temp);
+    				if(temp > maxValue) {
+    					if(temp <= K) {
+    						maxValue = temp;
+    					}
+    				}
+    			}
+    		}
+    		System.out.println(maxValue);
+    	}
+    }
+}

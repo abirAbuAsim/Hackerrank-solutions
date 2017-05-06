@@ -1,0 +1,2 @@
+INDEX VERSION 1.127+E:\GitProjects\Hackerrank-solutions\World CodeSprint\.metadata\.plugins\org.eclipse.jdt.core
+230039166.index

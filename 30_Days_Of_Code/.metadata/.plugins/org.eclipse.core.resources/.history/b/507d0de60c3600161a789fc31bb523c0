@@ -1,0 +1,35 @@
+/**
+ * 	Verdict	: 
+ * 	
+ * 	@author absakDev
+ *	@version June 19, 2016
+ */
+import java.io.*;
+import java.util.*;
+public class Solution {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int T, N, K = 0;
+		int a, counter;
+		T = input.nextInt();
+		
+		counter = 0;
+		for(int I = 1; I <= T; I++) {
+			N = input.nextInt();
+			K = input.nextInt();
+			for(int J = 1; J <= N; J++) {
+				a = input.nextInt();
+				if(a <= 0) {
+					counter++;
+				}
+			}
+			if(counter < K) {
+				System.out.println("YES");
+			} else {
+				System.out.println("NO");
+			}
+		}
+
+		
+	}
+}

@@ -1,0 +1,45 @@
+/**
+ * 	Verdict : 
+ * 
+ * 	@author absakDev
+ *	@version June 18, 2016
+ */
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    	Scanner input = new Scanner(System.in);
+    	int returnedDay, returnedMonth, returnedYear;
+    	int dueDay, dueMonth, dueYear;
+    	int fine;
+    	
+    	returnedDay = input.nextInt();
+    	returnedMonth = input.nextInt();
+    	returnedYear = input.nextInt();
+    	
+    	dueDay = input.nextInt();
+    	dueMonth = input.nextInt();
+    	dueYear = input.nextInt();
+    	
+    	if(returnedDay <= dueDay){
+    		if(returnedMonth <= dueMonth) {
+    			if(returnedYear <= dueYear) {
+    				fine = 0;
+    			} else {
+    				fine = 10000;
+    			}
+    		} else {
+    			fine = 500 * (returnedMonth - dueMonth);
+    		}
+    	} else {
+    		fine = 15 *(returnedDay - dueDay);
+    		if(returnedMonth > dueMonth) { 
+    			fine = 500 * (returnedMonth - dueMonth);
+    		}
+    	}
+    	System.out.println(fine);
+    }
+}

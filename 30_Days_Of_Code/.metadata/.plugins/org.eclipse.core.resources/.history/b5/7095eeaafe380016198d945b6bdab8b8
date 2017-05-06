@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    	Scanner input = new Scanner(System.in);
+    	int T = input.nextInt();
+    	long N;
+    	boolean prime;
+    	for(int I = 1; I <= T; I++) {
+    		N = input.nextLong();
+    		prime = true;
+    		long limit = (long)Math.sqrt(N);
+    		for(int J = 3; J <= limit; J += 2) {
+    			if(N % J == 0) {
+    				prime = false;
+    			}
+    			
+    		}
+    		if(N == 2){
+    			prime = true;
+    		}
+    		if(prime) {
+    			System.out.println("Prime");
+    		}else {
+    			System.out.println("Not prime");
+    		}
+    	}
+    }
+}
